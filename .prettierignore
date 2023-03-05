@@ -1,0 +1,6 @@
+dist
+public
+src/assets
+*.html
+*.json
+*.ts

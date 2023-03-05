@@ -1,0 +1,40 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "standard-with-typescript"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": [
+            "./tsconfig.json"
+        ]
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "semi": ["error", "always", { "omitLastInOneLineBlock": false }],
+        "@typescript-eslint/semi": ["error", "always", { "omitLastInOneLineBlock": false }],
+        "indent": ["error", "tab"],
+        "@typescript-eslint/indent": ["error", "tab"],
+        "no-tabs": ["error", { "allowIndentationTabs": true }],
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+        "eol-last": 0,
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+        "linebreak-style": ["error", "windows"]
+    }
+}
