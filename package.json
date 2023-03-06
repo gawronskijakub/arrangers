@@ -2,7 +2,7 @@
   "name": "arrangers",
   "private": true,
   "homepage": "https://gawronskijakub.github.io/arrangers",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -21,6 +21,7 @@
     "sass": "^1.58.3"
   },
   "devDependencies": {
+    "@types/node": "^18.14.6",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
