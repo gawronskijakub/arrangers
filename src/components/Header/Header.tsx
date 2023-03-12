@@ -1,4 +1,4 @@
-import Hamburger from '../Hamburger';
+import Hamburger from '@Components/Hamburger';
 import styles from './Header.module.scss';
 
 export const Header = (): JSX.Element => {

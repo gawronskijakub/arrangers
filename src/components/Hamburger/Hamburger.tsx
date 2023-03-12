@@ -2,16 +2,23 @@ import { MouseEvent } from 'react';
 import styles from './Hamburger.module.scss';
 
 export const Hamburger = (): JSX.Element => {
-  const handleClick = (e: MouseEvent) => {
-    e.currentTarget.classList.toggle(styles['Open']);
-  };
+	const handleClick = (e: MouseEvent) => {
+		e.currentTarget.classList.toggle(styles['Open']);
+	};
 
-  return <div className={styles['Hamburger']} onClick={(e) => {handleClick(e)}}>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+	return (
+		<button
+			className={styles['Hamburger']}
+			onClick={e => {
+				handleClick(e);
+			}}
+		>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	);
 };
