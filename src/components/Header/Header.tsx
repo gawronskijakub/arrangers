@@ -1,5 +1,6 @@
-import Hamburger from '@Components/Hamburger';
-import Navigation from '../Navigation';
+import Hamburger from '$/components/Hamburger';
+import Navigation from '$/components/Navigation';
+
 import styles from './Header.module.scss';
 
 export const Header = (): JSX.Element => {

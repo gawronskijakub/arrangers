@@ -1,9 +1,11 @@
-import { MouseEvent } from 'react';
-import navigationStyles from '@Components/Navigation/Navigation.module.scss';
+import type { MouseEvent } from 'react';
+
+import navigationStyles from '$/components/Navigation/Navigation.module.scss';
+
 import styles from './Hamburger.module.scss';
 
 export const Hamburger = (): JSX.Element => {
-	const handleClick = (e: MouseEvent) => {
+	const handleClick = (e: MouseEvent): void => {
 		const currentTarget = e.currentTarget;
 
 		currentTarget.classList.toggle(styles['Open']);

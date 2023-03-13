@@ -8,8 +8,14 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@Components": path.resolve(__dirname, "./src/components/"),
-      "@Utils": path.resolve(__dirname, "./src/utils/")
+      "$": path.resolve(__dirname, "./src/")
+    }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "./src/scss/mixins" as *;`
+      }
     }
   }
 });

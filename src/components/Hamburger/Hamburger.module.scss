@@ -1,5 +1,3 @@
-@use './../../scss/mixins' as *;
-
 .Hamburger {
 	position: relative;
 	width: 36px;
@@ -20,7 +18,6 @@
 	width: 18px;
 	height: 6px;
 	transition: all 0.25s;
-	background-color: var(--white);
 	background-color: var(--black);
 
 	&:nth-child(1),
