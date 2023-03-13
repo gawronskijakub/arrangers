@@ -1,0 +1,87 @@
+.Hamburger {
+	position: relative;
+	width: 36px;
+	height: 36px;
+	overflow: hidden;
+	z-index: 10;
+	background: none;
+	border: none;
+
+	@include desktop {
+		display: none;
+	}
+}
+
+.Hamburger > span {
+	position: absolute;
+	display: block;
+	width: 18px;
+	height: 6px;
+	transition: all 0.25s;
+	background-color: var(--black);
+
+	&:nth-child(1),
+	&:nth-child(2) {
+		top: 0;
+	}
+
+	&:nth-child(3),
+	&:nth-child(4) {
+		top: 15px;
+	}
+
+	&:nth-child(5),
+	&:nth-child(6) {
+		top: 30px;
+	}
+
+	&:nth-child(odd) {
+		border-radius: 8px 0 0 8px;
+	}
+
+	&:nth-child(even) {
+		left: calc(50% - 1px);
+		border-radius: 0 8px 8px 0;
+	}
+}
+
+.Hamburger.Open > span {
+	&:nth-child(1),
+	&:nth-child(6) {
+		rotate: 45deg;
+	}
+
+	&:nth-child(2),
+	&:nth-child(5) {
+		rotate: -45deg;
+	}
+
+	&:nth-child(3) {
+		translate: -30px 0;
+	}
+
+	&:nth-child(4) {
+		translate: 30px 0;
+	}
+
+	&:nth-child(3),
+	&:nth-child(4) {
+		opacity: 0;
+	}
+
+	&:nth-child(1) {
+		translate: 3px 9px;
+	}
+
+	&:nth-child(6) {
+		translate: -3px -9px;
+	}
+
+	&:nth-child(2) {
+		translate: -3px 9px;
+	}
+
+	&:nth-child(5) {
+		translate: 3px -9px;
+	}
+}
