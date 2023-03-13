@@ -3,12 +3,22 @@
 	align-items: center;
 	justify-content: space-between;
 	flex-basis: 75px;
+	max-height: 100px;
 	padding: 0.75rem 1rem;
 	background-color: var(--base-color-01);
 	color: var(--white);
+
+	@include desktop {
+		flex-basis: 100px;
+		padding: 1rem 1.5rem;
+	}
 }
 
 .Header__Title {
 	font-size: 2.25rem;
 	letter-spacing: 1px;
+
+	@include desktop {
+		font-size: 2.75rem;
+	}
 }
