@@ -1,0 +1,40 @@
+@use '../../scss/mixins' as *;
+
+.Navigation {
+	position: absolute;
+	inset: 0;
+  translate: -100% 0;
+  display: flex;
+  align-items: center;
+	padding-left: 2rem;
+	transition: translate 0.25s;
+  background-color: var(--overlay);
+
+	ul {
+    display: flex;
+		flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    width: 75%;
+    height: 75%;
+    font-size: 1.75em;
+		list-style-type: none;
+    border-radius: 50px;
+    box-shadow: 4px 4px 40px var(--gray-50);
+    background-color: var(--white);
+    color: var(--black);
+
+		li {
+			padding: 1rem;
+      text-align: center;
+
+      a {
+        font-weight: 700;
+      }
+		}
+	}
+}
+
+.Navigation.Open {
+	translate: 0 0;
+}

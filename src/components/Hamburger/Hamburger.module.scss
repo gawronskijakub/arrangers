@@ -2,9 +2,10 @@
 
 .Hamburger {
 	position: relative;
-	width: 40px;
-	height: 40px;
+	width: 36px;
+	height: 36px;
 	overflow: hidden;
+	z-index: 10;
 	background: none;
 	border: none;
 
@@ -16,10 +17,11 @@
 .Hamburger > span {
 	position: absolute;
 	display: block;
-	width: 20px;
-	height: 8px;
+	width: 18px;
+	height: 6px;
 	transition: all 0.25s;
 	background-color: var(--white);
+	background-color: var(--black);
 
 	&:nth-child(1),
 	&:nth-child(2) {
@@ -28,12 +30,12 @@
 
 	&:nth-child(3),
 	&:nth-child(4) {
-		top: 16px;
+		top: 15px;
 	}
 
 	&:nth-child(5),
 	&:nth-child(6) {
-		top: 32px;
+		top: 30px;
 	}
 
 	&:nth-child(odd) {
@@ -41,7 +43,7 @@
 	}
 
 	&:nth-child(even) {
-		left: 50%;
+		left: calc(50% - 1px);
 		border-radius: 0 8px 8px 0;
 	}
 }
@@ -71,18 +73,18 @@
 	}
 
 	&:nth-child(1) {
-		translate: 4px 10px;
+		translate: 3px 9px;
 	}
 
 	&:nth-child(6) {
-		translate: -4px -10px;
+		translate: -3px -9px;
 	}
 
 	&:nth-child(2) {
-		translate: -4px 10px;
+		translate: -3px 9px;
 	}
 
 	&:nth-child(5) {
-		translate: 4px -10px;
+		translate: 3px -9px;
 	}
 }
